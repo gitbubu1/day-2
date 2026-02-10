@@ -1,11 +1,17 @@
-const app = express() 
+const express = require("express")
 
-app,get('/', (req, res) => {
-res.send("hello World")
+const app = express() // server instance create karna
+
+app.get('/', (req, res) => {
+    res.send("Hello World") // response bhejna
 })
 
-app.get("/about", function(req, res) {
-res.send("This is about page")
+app.get("/about", (req, res) => {
+    res.send("This is about page")
+})
+
+app.get("/home", (req, res) => {
+    res.send("This is home page")
 })
 
 app.listen(3000) // server start karna
